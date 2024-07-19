@@ -1,0 +1,65 @@
+<mxfile host="Electron" modified="2024-07-16T08:26:18.176Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="0piY2oyGPh6ofjK3wxJE" version="24.6.4" type="device">
+  <diagram name="Page-1" id="iYsiMf5kQcVjZ583Iqt_">
+    <mxGraphModel dx="862" dy="546" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OYJkPadLTAHqzQY48tiH-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="OYJkPadLTAHqzQY48tiH-12" target="OYJkPadLTAHqzQY48tiH-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="227" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OYJkPadLTAHqzQY48tiH-17" value="reserve book" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OYJkPadLTAHqzQY48tiH-4">
+          <mxGeometry x="-0.0116" y="-3" relative="1" as="geometry">
+            <mxPoint y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OYJkPadLTAHqzQY48tiH-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="OYJkPadLTAHqzQY48tiH-1" target="OYJkPadLTAHqzQY48tiH-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OYJkPadLTAHqzQY48tiH-1" value="Member" style="html=1;dashed=0;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="110" y="389" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="OYJkPadLTAHqzQY48tiH-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.035;exitY=0.663;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="OYJkPadLTAHqzQY48tiH-2" target="OYJkPadLTAHqzQY48tiH-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OYJkPadLTAHqzQY48tiH-11" value="book status" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OYJkPadLTAHqzQY48tiH-9">
+          <mxGeometry x="-0.035" y="3" relative="1" as="geometry">
+            <mxPoint y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OYJkPadLTAHqzQY48tiH-2" value="Book search" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;perimeter=ellipsePerimeter;" vertex="1" parent="1">
+          <mxGeometry x="414" y="374" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="OYJkPadLTAHqzQY48tiH-3" value="Circulation Management" style="shape=ellipse;html=1;dashed=0;whiteSpace=wrap;aspect=fixed;perimeter=ellipsePerimeter;" vertex="1" parent="1">
+          <mxGeometry x="330" y="189" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="OYJkPadLTAHqzQY48tiH-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="OYJkPadLTAHqzQY48tiH-6" target="OYJkPadLTAHqzQY48tiH-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OYJkPadLTAHqzQY48tiH-6" value="Book records" style="html=1;dashed=0;whiteSpace=wrap;shape=partialRectangle;right=0;" vertex="1" parent="1">
+          <mxGeometry x="590" y="259" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="OYJkPadLTAHqzQY48tiH-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.022;entryY=0.337;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="OYJkPadLTAHqzQY48tiH-1" target="OYJkPadLTAHqzQY48tiH-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OYJkPadLTAHqzQY48tiH-10" value="book details" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OYJkPadLTAHqzQY48tiH-8">
+          <mxGeometry x="0.0693" y="-3" relative="1" as="geometry">
+            <mxPoint y="-4" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OYJkPadLTAHqzQY48tiH-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="OYJkPadLTAHqzQY48tiH-12" target="OYJkPadLTAHqzQY48tiH-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="OYJkPadLTAHqzQY48tiH-19" value="update status" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="OYJkPadLTAHqzQY48tiH-18">
+          <mxGeometry x="0.1753" y="-2" relative="1" as="geometry">
+            <mxPoint y="-3" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OYJkPadLTAHqzQY48tiH-12" value="if status = &#39;Y&#39;" style="shape=rhombus;html=1;dashed=0;whiteSpace=wrap;perimeter=rhombusPerimeter;" vertex="1" parent="1">
+          <mxGeometry x="115" y="194" width="90" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
