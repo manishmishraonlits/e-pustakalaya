@@ -1,0 +1,8 @@
+#sign-in-container{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.login_logo{
+    height: 100px;
+}
