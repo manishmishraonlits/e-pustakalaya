@@ -9,14 +9,11 @@
 </head>
 
 <body>
-    <header>
-        <img src="image.jpg" alt="ePustakalaya" class="logo" width="40px">
-        <a href="#">Admin</a>
-        <a href="#">Staff</a>
-        <a href="#">Member</a>
-    </header>
+<?php include "header.php"; ?>
+    
     <div>
-
+        <label for="name">Name</label>
+        <input type="text" class="">
     </div>
     <?php include "footer.php"; ?>
 </body>

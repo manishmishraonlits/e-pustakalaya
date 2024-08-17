@@ -6,6 +6,14 @@
     <title>Books</title>
 </head>
 <body>
-    
+    <table>
+        <th>
+            <td>S.No</td>
+            <td>Name</td>
+            <td>Author</td>
+            <td>Title</td>
+
+        </th>
+    </table>
 </body>
 </html>
