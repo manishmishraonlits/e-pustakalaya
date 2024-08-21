@@ -1,0 +1,289 @@
+/* -------------------------F O R     A L L     C S S------------------------- */
+
+* {
+    font-family: Verdana;
+    /* font-size: 15px; */
+}
+
+.topic {
+    color: blueviolet;
+    font-size: x-large;
+}
+
+
+/* -------------------------L O G I N     C S S------------------------- */
+
+.login-body{
+    margin: 0;
+}
+
+#log-in-container {
+    display: grid;
+    grid-template-areas: 'logo login fix';
+}
+
+.login_logo {
+    width: 400px;
+    margin-top: 120px;
+}
+
+#logo {
+    grid-area: logo;
+}
+
+#login{
+    grid-area: login;
+    border: 1px gray solid;
+    border-radius: 10px;
+    margin-top: 100px;
+    h1{
+        text-align: center;   
+    }
+}
+
+#login button{
+    padding: 5px;
+    width: 80px;
+    margin-left: 120px;
+}
+
+.fix{
+    grid-area: fix;
+}
+
+#login label,
+input {
+    display:block;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#login input{
+    width: 60%;
+    padding: 10px;
+
+}
+
+
+/* -------------------------A D D     B O O K     C S S------------------------- */
+
+.book {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 10px;
+}
+
+.book-left {
+    padding: 10px;
+}
+
+.book-right {
+    padding: 10px;
+
+}
+
+.book-left input {
+    display: block;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 70%;
+
+}
+
+.book-right input,
+select {
+    display: block;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 70%;
+}
+
+.book-left button:hover {
+    color: green;
+}
+
+
+/* -------------------------M E M B E R     F O R M     C S S------------------------- */
+
+.member {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 10px;
+}
+
+.member-left {
+    padding: 10px;
+}
+
+.member-right {
+    padding: 10px;
+    margin-top: 57.5px;
+
+}
+
+.member-left input {
+    display: block;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 70%;
+
+}
+
+.member-right input,
+select {
+    display: block;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 70%;
+}
+
+
+/* -------------------------P U B L I S H E R     C S S------------------------- */
+
+.publisher {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.publisher-right {
+    margin-top: 57.5px;
+
+}
+
+.publisher-left input {
+    display: block;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 70%;
+}
+
+.publisher-right input {
+    display: block;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 70%;
+}
+
+
+/* -------------------------S U P P L I E R     C S S------------------------- */
+
+.supplier {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 10px;
+}
+
+.supplier-left input {
+    display: block;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 70%;
+}
+
+.supplier-right input {
+    display: block;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 70%;
+}
+
+
+/* -------------------------L A Y O U T     C S S------------------------- */
+
+body {
+    margin: 0;
+}
+
+.main-grid-container {
+    display: grid;
+    grid-template-areas:
+        'header header header header header header header'
+        'aside main main main main main main'
+        'aside footer footer footer footer footer footer';
+}
+
+.home {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.img-1,
+.img-2,
+.img-3,
+.img-4 {
+    /* border: 2px solid black; */
+    margin: 10px;
+}
+
+.hom-scr {
+    height: 350px;
+}
+
+header {
+    grid-area: header;
+    /* background-color: lightgray; */
+    padding: 10px;
+}
+
+aside {
+    grid-area: aside;
+    /* background-color:aliceblue; */
+    padding: 10px;
+    margin-left: 5px;
+    border-right: 1px solid rgb(192, 191, 191);
+}
+
+main {
+    grid-area: main;
+    /* background-color: chartreuse; */
+    padding: 10px;
+    min-height: 400px;
+}
+
+footer {
+    grid-area: footer;
+    /* background-color: lightgray; */
+    padding: 5px;
+    text-align: center;
+}
+
+
+/* -------------------------H E A D E R     C S S------------------------- */
+
+.header {
+    width: 70px;
+    margin-bottom: -10px;
+}
+
+nav.inline {
+    display: inline;
+    float: right;
+    margin-top: 25px;
+    margin-right: 20px;
+}
+
+nav.inline a,
+button {
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+
+/* -------------------------S I D E B A R     C S S------------------------- */
+
+.side {
+    display: grid;
+}
+
+.side a {
+    margin-bottom: 20px;
+    text-decoration: none;
+}
