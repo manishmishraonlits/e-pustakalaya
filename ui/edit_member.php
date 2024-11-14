@@ -1,3 +1,12 @@
+<?php
+
+require 'member_util.php';
+
+$id = $_GET['uid'];
+$member = fetch_member($id);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,28 +22,28 @@
     <aside><?php require('sidebar.php') ?></aside>
     <main>
         <label for="details" class="topic">MEMBER DETAILS</label>
-        <form class="form" action="db_add_member.php" method="post">
+        <form class="form" action="db_update_member.php?id=<?= $member['member_id']?>" method="post">
             <div class="form-left">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name" required>
+                <input type="text" name="name" id="name" value="<?= $member['member_name']?>">
                 <label for="address">Address</label>
-                <input type="text" name="street" id="street" placeholder="Street" required>
+                <input type="text" name="street" id="street" placeholder="Street" value="<?= $member['street']?>">
                 <label for="state">State</label>
-                <input type="text" name="state" id="state" required>
+                <input type="text" name="state" id="state" value="<?= $member['state']?>">
                 <label for="contact">Contact</label>
-                <input type="text" name="contact" id="contact" maxlength="10" required>
+                <input type="text" name="contact" id="contact" maxlength="10" value="<?= $member['contact']?>">
                 <br>
-                <button>Submit</button>
+                <button>Update</button>
             </div>
             <div class="form-right">
                 <label for="city">City</label>
-                <input type="text" name="city" id="city" required>
+                <input type="text" name="city" id="city" value="<?= $member['city']?>">
                 <label for="pin">PIN Code</label>
-                <input type="text" name="pin" id="pin" maxlength="6" required>
+                <input type="text" name="pin" id="pin" maxlength="6" value="<?= $member['pin_code']?>">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
+                <input type="email" name="email" id="email" value="<?= $member['email']?>">
                 <label for="aadhar">Aadhar ID</label>
-                <input type="aadhar" name="aadhar" id="aadhar" maxlength="12" required>
+                <input type="aadhar" name="aadhar" id="aadhar" maxlength="12" value="<?= $member['aadhar']?>">
             </div>
         </form>
     </main>

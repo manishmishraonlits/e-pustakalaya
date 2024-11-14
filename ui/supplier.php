@@ -1,7 +1,6 @@
 <?php
-
-require 'member_util.php';
-$members = fetch_members();
+require 'book_util.php';
+$suppliers = fetch_suppliers();
 
 $message = null;
 if (isset($_GET['status'])) {
@@ -16,14 +15,13 @@ if (isset($_GET['status'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Members</title>
+    <title>Publishers</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -36,7 +34,7 @@ if (isset($_GET['status'])) {
             <tr class="top">
                     <td colspan="5"><?= $message ?></td>
                     <td colspan="1">
-                        <a href="add_member.php"><button>New Member</button></a>
+                        <a href="add_supplier.php"><button>New Supplier</button></a>
                     </td>
                 </tr>
                 <tr>
@@ -47,12 +45,9 @@ if (isset($_GET['status'])) {
                     <th class="email">Email</th>
                     <th class="details">Action</th>
                 </tr>
-
             </thead>
-
-
             <tbody>
-                <?php $a = 1; foreach ($members as $member) { ?>
+                <?php $a = 1; foreach ($suppliers as $supplier) { ?>
                     <tr>
                         <td colspan="6">
                             <hr>
@@ -60,14 +55,12 @@ if (isset($_GET['status'])) {
                     </tr>
                     <tr>
                         <td class="sno"><b><?= $a++; echo '.' ?></b></td>
-                        <td class="no"><?= $member['member_id'] ?></td>
-                        <td class="name"><?= $member['member_name'] ?></td>
-                        <td class="contact"><?= $member['contact'] ?></td>
-                        <td class="email"><?= $member['email'] ?></td>
-                        <td class="details"><a href="view_member.php?id=<?= $member['member_id'] ?>">View</a></td>
+                        <td class="no"><?= $supplier['supplier_id'] ?></td>
+                        <td class="name"><?= $supplier['supplier_name'] ?></td>
+                        <td class="contact"><?= $supplier['contact'] ?></td>
+                        <td class="email"><?= $supplier['email'] ?></td>
+                        <td class="details"><a href="view_supplier.php?id=<?= $supplier['supplier_id'] ?>">View</a></td>
                     </tr>
-
-
                 <?php } ?>
             </tbody>
         </table>

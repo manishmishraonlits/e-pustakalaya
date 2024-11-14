@@ -1,3 +1,8 @@
+ CREATE TABLE admin(
+    user varchar(50) PRIMARY KEY,
+    password varchar(20)
+);
+
 CREATE TABLE publisher(
     publisher_id INT AUTO_INCREMENT PRIMARY KEY,
     publisher_name VARCHAR(50),
@@ -28,6 +33,11 @@ CREATE TABLE supplier(
     pin_code CHAR(6)
 );
 
+CREATE TABLE category(
+    category_id INT AUTO_INCREMENT PRIMARY KEY,
+    category VARCHAR(50)
+);
+
 CREATE TABLE book(
     book_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(50),
@@ -40,9 +50,19 @@ CREATE TABLE book(
     entry_date DATE,
     rack_no CHAR(3),
     supplier_id INT,
+    book_status INT(1),
+    category_id INT,
     FOREIGN KEY (publisher_id) REFERENCES publisher(publisher_id),
-    FOREIGN KEY (author_id) REFERENCES author(author_id),
-    FOREIGN KEY (supplier_id) REFERENCES supplier(supplier_id)
+    FOREIGN KEY (supplier_id) REFERENCES supplier(supplier_id),
+    FOREIGN KEY (category_id) REFERENCES category(category_id)
+);
+
+CREATE TABLE book_author(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    book_id INT,
+    author_id INT,
+    FOREIGN KEY (book_id) REFERENCES book(book_id),
+    FOREIGN KEY (author_id) REFERENCES author(author_id)
 );
 
 CREATE TABLE member(
@@ -53,7 +73,8 @@ CREATE TABLE member(
     state VARCHAR(20),
     pin_code CHAR(6),
     contact CHAR(10),
-    email VARCHAR(50)
+    email VARCHAR(50),
+    aadhar CHAR(12)
 );
 
 CREATE TABLE book_issue(
@@ -62,6 +83,7 @@ CREATE TABLE book_issue(
     member_id INT,
     issue_date DATE,
     expected_return_date DATE,
+    issue_status INT(1),
     FOREIGN KEY (book_id) REFERENCES book(book_id),
     FOREIGN KEY (member_id) REFERENCES member(member_id)
 );

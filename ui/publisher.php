@@ -1,7 +1,6 @@
 <?php
-
-require 'member_util.php';
-$members = fetch_members();
+require 'book_util.php';
+$publishers = fetch_publishers();
 
 $message = null;
 if (isset($_GET['status'])) {
@@ -16,14 +15,13 @@ if (isset($_GET['status'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Members</title>
+    <title>Publishers</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -36,23 +34,20 @@ if (isset($_GET['status'])) {
             <tr class="top">
                     <td colspan="5"><?= $message ?></td>
                     <td colspan="1">
-                        <a href="add_member.php"><button>New Member</button></a>
+                        <a href="add_publisher.php"><button>New Publisher</button></a>
                     </td>
                 </tr>
                 <tr>
                     <th class="no">S.No</th>
                     <th class="no">ID</th>
                     <th class="name">Name</th>
-                    <th class="contact">Contact</th>
                     <th class="email">Email</th>
+                    <th class="email">Website</th>
                     <th class="details">Action</th>
                 </tr>
-
             </thead>
-
-
             <tbody>
-                <?php $a = 1; foreach ($members as $member) { ?>
+                <?php $a = 1; foreach ($publishers as $publisher) { ?>
                     <tr>
                         <td colspan="6">
                             <hr>
@@ -60,14 +55,12 @@ if (isset($_GET['status'])) {
                     </tr>
                     <tr>
                         <td class="sno"><b><?= $a++; echo '.' ?></b></td>
-                        <td class="no"><?= $member['member_id'] ?></td>
-                        <td class="name"><?= $member['member_name'] ?></td>
-                        <td class="contact"><?= $member['contact'] ?></td>
-                        <td class="email"><?= $member['email'] ?></td>
-                        <td class="details"><a href="view_member.php?id=<?= $member['member_id'] ?>">View</a></td>
+                        <td class="no"><?= $publisher['publisher_id'] ?></td>
+                        <td class="name"><?= $publisher['publisher_name'] ?></td>
+                        <td class="email"><?= $publisher['email'] ?></td>
+                        <td class="email"><?= $publisher['website'] ?></td>
+                        <td class="details"><a href="view_publisher.php?id=<?= $publisher['publisher_id'] ?>">View</a></td>
                     </tr>
-
-
                 <?php } ?>
             </tbody>
         </table>

@@ -1,10 +1,21 @@
+<?php
+$message = null;
+if (isset($_GET['status'])) {
+    if ($_GET['status'] == 1)
+        $message = "Invalid email or password!";
+    else if ($_GET['status'] == 2)
+        $message = "Logout successful!";
+    else if ($_GET['status'] == 3)
+        $message = "Invalid session. Login again!";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
     <title>Login</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -25,6 +36,7 @@
                 <input type="password" class="password">
                 <br><br>
                 <button>Log-in</button>
+            
             </form>
         </div>
         <div class="fix"></div>

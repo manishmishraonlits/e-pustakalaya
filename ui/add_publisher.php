@@ -13,30 +13,31 @@
     <aside><?php require('sidebar.php') ?></aside>
     <main>
         <label for="details" class="topic">PUBLISHER DETAILS</label>
-        <form class="publisher">
-            <div class="publisher-left">
+        <form class="form" action="db_add_publisher.php" method="post">
+            <div class="form-left">
                 <label for="name">Name</label>
-                <input type="text">
-                <label for="address">Address</label>
-                <input type="text" placeholder="Street">
+                <input type="text" name="name" id="name" required>
+                <label for="city">Address</label>
+                <input type="text" name="street" id="street" placeholder="Street">
+
                 <label for="state">State</label>
-                <input type="text">
+                <input type="text" name="state" id="state">
                 <label for="contact">Contact</label>
-                <input type="text" maxlength="10">
+                <input type="text" name="contact" id="contact" maxlength="10">
                 <label for="website">Website</label>
-                <input type="text">
+                <input type="text" name="website" id="website">
                 <br>
                 <button>Submit</button>
             </div>
-            <div class="publisher-right">
+            <div class="d-form-right">
                 <label for="city">City</label>
-                <input type="text">
+                <input type="text" name="city" id="city">
                 <label for="pin">PIN Code</label>
-                <input type="text" maxlength="6">
+                <input type="text" name="pin" id="pin" maxlength="6">
                 <label for="email">Email</label>
-                <input type="email">
+                <input type="email" name="email" id="email">
                 <label for="gstin">GSTIN</label>
-                <input type="text" maxlength="15">
+                <input type="text" name="gstin" id="gstin" maxlength="15">
             </div>
         </form>
     </main>

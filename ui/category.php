@@ -1,7 +1,6 @@
 <?php
-
-require 'member_util.php';
-$members = fetch_members();
+require 'book_util.php';
+$results = fetch_category();
 
 $message = null;
 if (isset($_GET['status'])) {
@@ -11,11 +10,8 @@ if (isset($_GET['status'])) {
         $message = "Added Successfully!";
     else if ($_GET['status'] == 2)
         $message = "Updated Successfully!";
-    else if ($_GET['status'] == 3)
-        $message = "Deleted Successfully!";
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +19,7 @@ if (isset($_GET['status'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Members</title>
+    <title>Publishers</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -33,41 +29,32 @@ if (isset($_GET['status'])) {
     <main>
         <table>
             <thead>
-            <tr class="top">
-                    <td colspan="5"><?= $message ?></td>
+                <tr class="top">
+                    <td colspan="3"><?= $message ?></td>
                     <td colspan="1">
-                        <a href="add_member.php"><button>New Member</button></a>
+                        <a href="add_category.php"><button>New Category</button></a>
                     </td>
                 </tr>
                 <tr>
                     <th class="no">S.No</th>
                     <th class="no">ID</th>
-                    <th class="name">Name</th>
-                    <th class="contact">Contact</th>
-                    <th class="email">Email</th>
+                    <th class="email">Category</th>
                     <th class="details">Action</th>
                 </tr>
-
             </thead>
-
-
             <tbody>
-                <?php $a = 1; foreach ($members as $member) { ?>
+                <?php $a = 1; foreach ($results as $category) {?>
                     <tr>
-                        <td colspan="6">
+                        <td colspan="4">
                             <hr>
                         </td>
                     </tr>
                     <tr>
-                        <td class="sno"><b><?= $a++; echo '.' ?></b></td>
-                        <td class="no"><?= $member['member_id'] ?></td>
-                        <td class="name"><?= $member['member_name'] ?></td>
-                        <td class="contact"><?= $member['contact'] ?></td>
-                        <td class="email"><?= $member['email'] ?></td>
-                        <td class="details"><a href="view_member.php?id=<?= $member['member_id'] ?>">View</a></td>
+                        <td class="sno"><b><?= $a++; echo "." ?></b></td>
+                        <td class="no"><?= $category['category_id'] ?></td>
+                        <td class="email"><?= $category['category'] ?></td>
+                        <td class="email"><a href="edit_category.php?eid=<?= $category['category_id'] ?>">Edit</a></td>
                     </tr>
-
-
                 <?php } ?>
             </tbody>
         </table>
