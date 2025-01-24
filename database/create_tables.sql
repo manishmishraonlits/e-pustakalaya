@@ -87,3 +87,9 @@ CREATE TABLE book_issue(
     FOREIGN KEY (book_id) REFERENCES book(book_id),
     FOREIGN KEY (member_id) REFERENCES member(member_id)
 );
+
+CREATE TABLE opac_request(
+    request_id INT AUTO_INCREMENT PRIMARY KEY,
+    book_id INT,
+    FOREIGN KEY (book_id) REFERENCES book(book_id)
+);

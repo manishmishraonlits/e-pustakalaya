@@ -106,7 +106,7 @@ function count_book()
 function count_book_out()
 {
     require 'connect.php';
-    $sql = "SELECT COUNT(transaction_id) FROM book_issue";
+    $sql = "SELECT COUNT(transaction_id) FROM book_issue WHERE issue_status = 1";
     $result = mysqli_query($connection, $sql);
     // $book = mysqli_fetch_assoc($result)['COUNT(book_id)'];
     // return $book;

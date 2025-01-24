@@ -48,36 +48,36 @@ if (isset($_POST['search'])) {
             <input type="text" class="title" name="title" placeholder="Search by book title...">
             <button name='search'>Search</button>
         </form>
-<br><br>
-        <table>
-            <thead>
-                <tr>
-                    <th class="no">S.No</th>
-                    <th class="name">Title</th>
-                    <th class="name">Publisher</th>
-                    <th class="name">Status</th>
-                    <th class="name">Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php $a = 1;
-                foreach ($books as $book) { ?>
+        <br><br>
+        <form>
+            <table>
+                <thead>
                     <tr>
-                        <td colspan="5">
-                            <hr>
-                        </td>
+                        <th class="no">S.No</th>
+                        <th class="name">Title</th>
+                        <th class="name">Publisher</th>
+                        <th class="name">Status</th>
                     </tr>
-                    <tr>
-                        <td class="sno"><b><?= $a++; echo '.' ?></b></td>
-                        <td class="name"><?= $book['title'] ?></td>
-                        <td class="name"><?= fetch_publisher_name($book['publisher_id']) ?></td>
-                        <td class="name"><?= book_status($book['book_status']) ?></td>
-                        <td class="name"><button class="status">Request</button></td>
-                    </tr>
-                <?php } ?>
-            </tbody>
-        </table>
-
+                </thead>
+                <tbody>
+                    <?php $a = 1;
+                    foreach ($books as $book) { ?>
+                        <tr>
+                            <td colspan="5">
+                                <hr>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sno"><b><?= $a++;
+                                                echo '.' ?></b></td>
+                            <td class="name"><?= $book['title'] ?></td>
+                            <td class="name"><?= fetch_publisher_name($book['publisher_id']) ?></td>
+                            <td class="name"><?= book_status($book['book_status']) ?></td>
+                        </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </form>
     </main>
 
     <footer><?php require('footer.php') ?></footer>

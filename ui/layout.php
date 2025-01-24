@@ -11,7 +11,7 @@ $book = count_book();
 $member = count_member();
 $out = count_book_out();
 $in = $book - $out;
-$issues = fetch_issues();
+$issues = fetch_layout_issues();
  
 ?>
 
@@ -81,7 +81,7 @@ $issues = fetch_issues();
                             <td ><?= $issue['book_id'] ?></td>
                             <td ><?= $issue['member_id'] ?></td>
                             <td ><?= $issue['expected_return_date'] ?></td>
-                            <td ><a href="">View</a></td>
+                            <td ><a href="circulation.php">View</a></td>
                         </tr>
                     <?php } ?>
                 </tbody>

@@ -44,6 +44,14 @@ function fetch_issues(){
     return $issues;
 }
 
+function fetch_layout_issues(){
+    require ('connect.php');
+    $sql = "SELECT * FROM book_issue WHERE issue_status = 1";
+    $result = mysqli_query($connection, $sql);
+    $issues = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    return $issues;
+}
+
 function fetch_category()
 {
     require ('connect.php');
